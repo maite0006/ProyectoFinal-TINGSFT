@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Obligatorio Taller Ingeniería Software</title>
+</head>
+<body>
+  <header >
+    <div class="logo">
+      <img src="img/LogoBarberia.png" alt="Logo Estilo Clásico">
+    </div>
+    <h1 >~TRADICIÓN Y ESTILO EN CADA CORTE~</h1>
+  </header>
+
+  <nav>
+    <a id="btnHome" href="#">Home</a>
+    <a href="#">Servicios</a>
+    <a href="#">Galería</a>
+    <a href="#">Contacto</a>
+    <a href="#">Barberos</a>
+  </nav>
+
+  <div id="main">
+    <div class="button-container">
+      <button id="btnLoginInicio">Login</button>
+      <button id="btnReservarInicio">Reservar</button>
+    </div>
+  </div>
+
+  <div id="login" >
+  <label for="usuarioLoginId">Ingrese su nombre de usuario</label>
+  <input type="text" id="usuarioLoginId">
+
+  <label for="passwordLoginId">Ingrese su contraseña</label>
+  <input type="password" id="passwordLoginId">
+
+  <button type="button" id="btnLogin">Login</button>
+  <p id="mensajeLogin" style="color: red;"></p>
+</div>
+
+<div id="listaReservas">
+
+  <h3>Lista de reservas para el día de hoy</h3>
+  <div id="divTablaListaReservas"></div>
+
+</div>
+
+<div id="reservasSeccion">
+  <form id="formReserva">
+    <label>Fecha:
+      <input type="date" id="fechaReserva" name="fecha" required>
+    </label>
+    <span id="mensajeFecha" style="color:red;" ></span>
+    
+    <select id="horaReserva" name="hora" required>
+      <option value="NH">Seleccione hora</option>
+      <option value="09:00">09:00</option>
+      <option value="09:30">09:30</option>
+      <option value="10:00">10:00</option>
+      <option value="10:30">10:30</option>
+      <option value="11:00">11:00</option>
+      <option value="11:30">11:30</option>
+      <option value="12:00">12:00</option>
+      <option value="12:30">12:30</option>
+      <option value="13:00">13:00</option>
+      <option value="13:30">13:30</option>
+      <option value="14:00">14:00</option>
+      <option value="14:30">14:30</option>
+      <option value="15:00">15:00</option>
+      <option value="15:30">15:30</option>
+      <option value="16:00">16:00</option>
+      <option value="16:30">16:30</option>
+      <option value="17:00">17:00</option>
+      <option value="17:30">17:30</option>
+    </select>
+    <span id="mensajeHora" style="color:red;" ></span>
+    
+    <label>Especialidad:
+      <select id="especialidadReserva" required>
+        <option value="NE">Seleccione</option>
+        <option value="Corte clásico">Corte clásico</option>
+        <option value="Corte degradé">Corte degradé</option>
+        <option value="Color">Color</option>
+        <option value="Recorte de barba">Recorte de barba</option>
+      </select>
+    </label>
+    <span id="mensajeEspecialidad" style="color:red;" ></span>
+
+    <label>Barbero:
+      <select id="barberoReserva">
+        <option id="NBS" value="NBS">Cualquier barbero</option>
+        <option id="BCG" value="Carlos Gomez">Carlos Gomez</option>
+        <option id="BDR" value="Diego Rodriguez">Diego Rodriguez</option>
+        <option id="BMS" value="Martin Silva">Martin Silva</option>
+        <option id="BSD" value="Sebastian Duarte">Sebastian Duarte</option>
+      </select>
+    </label>
+    <span id="mensajeBarbero" style="color:red;" ></span>
+    
+    <label>Nombre:
+      <input type="text" id="nombreReserva" required placeholder="Ingrese un nombre para la reserva">
+    </label>
+      <span id="mensajeNombre" style="color: red;"></span>
+    <label>Teléfono:
+      <input type="tel" id="telefonoReserva" required placeholder="Ej: 099123456">
+    </label>
+    <span id="mensajeTel" style="color:red;" ></span>
+    <label>E-mail:
+      <input type="email" id="emailReserva" required placeholder="ejemplo@dominio.com">
+    </label>
+    <span id="mensajeEmail" style="color:red;" ></span>
+    
+    <div id="mensajeGeneral" class="error"></div>
+    <button type="submit" id="botonReserva">Reservar Cita</button>
+  </form>
+</div>
+<div id="popupReserva" style="display: none; position: fixed; top: 30%; left: 50%; transform: translate(-50%, -50%);
+  background-color: #f0f9f4; padding: 20px 30px; border: 2px solid #28a745; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index: 9999;">
+  <strong>¡Reserva confirmada!</strong>
+  <p id="popupContenido"></p>
+  <button onclick="cerrarPopup()" style="margin-top: 10px; background-color: #28a745; color: white; border: none; padding: 8px 12px; border-radius: 5px;">Aceptar</button>
+</div>
+  <footer>
+    <div> <img src="img/facebook.png" alt="Logo Instagram">
+       @estiloclasicobarber_</div>
+    <div> <img src="img/instagram.jpg" alt="Logo Instagram">
+      @barberiaestiloclasico</div>
+  </footer>
+
+  <script src="js/reservas.js"></script>
+  <script src="js/codigo.js"></script>
+</body>
+</html>
