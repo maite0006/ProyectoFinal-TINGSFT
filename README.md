@@ -16,7 +16,7 @@ La aplicación incluye:
 - **HTML5** – Estructura del sitio.
 - **CSS3** – Estilos y diseño responsivo.
 - **JavaScript (ES6)** – Lógica de validaciones y funcionalidad del sistema de reservas.
-- **Git/GitHub** – Control de versiones y repositorio del proyecto.
+- **Git/GitHub** – Repositorio del proyecto.
 
 ## Equipo de desarrollo
 - Cecilia Magurno
